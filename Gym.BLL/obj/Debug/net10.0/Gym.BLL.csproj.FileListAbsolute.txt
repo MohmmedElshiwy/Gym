@@ -1,0 +1,15 @@
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\bin\Debug\net10.0\Gym.BLL.deps.json
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\bin\Debug\net10.0\Gym.BLL.dll
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\bin\Debug\net10.0\Gym.BLL.pdb
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\bin\Debug\net10.0\Gym.DAL.dll
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\bin\Debug\net10.0\Gym.DAL.pdb
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\Gym.BLL.csproj.AssemblyReference.cache
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\Gym.BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\Gym.BLL.AssemblyInfoInputs.cache
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\Gym.BLL.AssemblyInfo.cs
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\Gym.BLL.csproj.CoreCompileInputs.cache
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\Gym.BLL.csproj.Up2Date
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\Gym.BLL.dll
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\refint\Gym.BLL.dll
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\Gym.BLL.pdb
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\ref\Gym.BLL.dll
