@@ -12,3 +12,4 @@ F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.DAL\obj\
 F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.DAL\obj\Debug\net10.0\Gym.DAL.csproj.AssemblyReference.cache
 F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.DAL\bin\Debug\net10.0\Gym.DAL.runtimeconfig.json
 F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.DAL\obj\Debug\net10.0\Gym.DAL.genruntimeconfig.cache
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.DAL\obj\Debug\net10.0\Gym.DAL.sourcelink.json

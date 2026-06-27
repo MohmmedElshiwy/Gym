@@ -9,12 +9,17 @@ namespace Gym.DAL.Contexts
 {
     public class GymDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
 
-            optionsBuilder.UseSqlServer(
-                "Server=.;Database=Gym;Trusted_Connection=True;TrustServerCertificate=True"
-            );
+        //    optionsBuilder.UseSqlServer(
+        //        "Server=.;Database=Gym;Trusted_Connection=True;TrustServerCertificate=True"
+        //    );
+        //}
+
+        public GymDbContext(DbContextOptions<GymDbContext> options)
+          : base(options)
+        {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

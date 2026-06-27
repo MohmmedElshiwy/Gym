@@ -1,4 +1,5 @@
 
+using Gym.DAL.Entities;
 using Gym.DAL.Repo.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,17 +8,17 @@ namespace MyApp.Namespace
 {
     public class PlanController : Controller
     {
-       private readonly IPlanReositories planReositories;
+       private readonly IGenaricRepo<Plan> planReositories;
 
-        public PlanController(IPlanReositories _planReositories)
+        public PlanController(IGenaricRepo<Plan> _planReositories)
         {
             planReositories = _planReositories;
 
 
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(bool isTraked , CancellationToken ct)
         {
-            var plans = await planReositories.GetAll();
+            var plans = await planReositories.GetAll(false,ct);
             return View(plans); 
         }
         public async Task<IActionResult> Details(int id)

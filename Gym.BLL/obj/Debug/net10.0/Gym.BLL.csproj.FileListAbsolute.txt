@@ -13,3 +13,4 @@ F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\
 F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\refint\Gym.BLL.dll
 F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\Gym.BLL.pdb
 F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\ref\Gym.BLL.dll
+F:\BackEnd\Root\Course\Eng Ahmed Nasser\08 ASP.Net MVC\Projects\Gym\Gym.BLL\obj\Debug\net10.0\Gym.BLL.sourcelink.json

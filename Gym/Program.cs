@@ -1,13 +1,21 @@
+using Gym.BLL.Services.Classes;
+using Gym.BLL.Services.Interfaces;
 using Gym.DAL.Contexts;
 using Gym.DAL.Repo.Classes;
 using Gym.DAL.Repo.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<GymDbContext>();
-builder.Services.AddScoped<IPlanReositories, PlanRepo>();
+builder.Services.AddDbContext<GymDbContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+//builder.Services.AddScoped<IPlanReositories, PlanRepo>();
+builder.Services.AddScoped(typeof(IGenaricRepo<>), typeof(GenaricRpo<>));
+builder.Services.AddScoped<IMemberServices, MemberServices>();
 
 var app = builder.Build();
 
