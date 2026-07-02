@@ -46,6 +46,7 @@ namespace Gym.BLL.Services.Classes
         {
             var member = await memberRepo.GetById(id, ct);
             if (member is null) return null;
+
             var memberViewModel = new MemberViewModel
             {
         
@@ -54,8 +55,10 @@ namespace Gym.BLL.Services.Classes
                 Phone = member.Phone,
                 DateOfBirth = member.DateOfBirth.ToShortDateString(),
                 Gender = member.Gender.ToString(),
-                Address = $"{member.Address.BuildNumber} - {member.Address.Street} - {member.Address.City} ",
+                Address =
+            $"{member.Address?.BuildNumber??null } - {member.Address?.Street ?? ""} - {member.Address?.City ?? ""}".Trim(' ', '-')
             };
+
 
             var activeMemberShip = await memberShipRepo.FirstOrDefaultAsync(mb=>mb.MemberId == id && mb.EndDate > DateTime.Now, ct,false);
             if(activeMemberShip is not null)
@@ -92,13 +95,14 @@ namespace Gym.BLL.Services.Classes
             if(member is null) return null;
             return new MemberToUpdateViewModel()
             {
+               
                 Name = member.Name,
                 Photo = member.Photo,
                 Email = member.Email,
                 Phone = member.Phone,
-                BuildingNumber = member.Address.BuildNumber,
-                City = member.Address.City,
-                Street = member.Address.Street
+                BuildingNumber = member.Address?.BuildNumber,
+                City = member.Address?.City,
+                Street = member.Address?.Street
             };
         }
 
@@ -148,11 +152,12 @@ namespace Gym.BLL.Services.Classes
             if(member is null) return false;
             if (await memberRepo.AnyAsync(m => m.Email == model.Email && m.Id != id)) return false;
             if (await memberRepo.AnyAsync(m => m.Phone == model.Phone && m.Id != id)) return false;
+         
             member.Email = model.Email;
             member.Phone = model.Phone;
-            member.Address.City = model.City;
-            member.Address.Street = model.Street;
-            member.Address.BuildNumber = model.BuildingNumber;
+            member.Address?.City = model.City;
+            member.Address?.Street = model.Street;
+            member.Address?.BuildNumber = model.BuildingNumber;
             member.UpdatedAt= DateTime.Now;
 
 

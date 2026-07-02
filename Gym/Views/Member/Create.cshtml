@@ -1,4 +1,7 @@
 ﻿@model CreateMemberViewModel
+@{
+    ViewData["Title"] = "Add Member";
+}
 <header class="mb-4">
     <h3 class="text-primary-color">Add Member</h3>
 </header>
@@ -31,31 +34,33 @@
             <div class="row g-3">
                 <div class="col-12 col-md-6">
                     <label class="form-label">Name</label>
-                    <input name="Name" type="text" class="form-control" />
+                    <input asp-for="Name" type="text" class="form-control" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div class="col-12 col-md-6">
                     <label class="form-label">Email</label>
-                    <input name="Email" type="text" class="form-control" />
+                    <input asp-for="Email"
+                        type="text" class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
 
                 </div>
                 <div class="col-12 col-md-6">
                     <label class="form-label">Phone</label>
-                    <input name="Phone" type="text" class="form-control" />
+                    <input asp-for="Phone"
+                        type="text" class="form-control" />
                     <span asp-validation-for="Phone" class="text-danger"></span>
                 </div>
                 <div class="col-12 col-md-6">
                     <label class="form-label">DateOfBirth</label>
-                    <input name="DateOfBirth" class="form-control" type="date" />
+                    <input asp-for="DateOfBirth"
+                        class="form-control" type="date" />
                      <span asp-validation-for="DateOfBirth" class="text-danger"></span>
                 </div>
                 <div class="col-12 col-md-6">
                     <label class="form-label">Gender</label>
-                    <select name="Gender" class="form-select" asp-items="Html.GetEnumSelectList<Gender>()">
+                    <select asp-for="Gender" class="form-select" asp-items="Html.GetEnumSelectList<Gender>()">
                         <option value="">-- Select Gender --</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
+                      
                     </select>
                     <span asp-validation-for="Gender" class="text-danger"></span>
                 </div>
@@ -68,18 +73,18 @@
 
                 <div class="col-12 col-md-6">
                     <label class="form-label">BuildingNumber</label>
-                    <input name="BuildingNumber" class="form-control" />
+                    <input asp-for="BuildingNumber" class="form-control" />
                     <span asp-validation-for="BuildingNumber" class="text-danger"></span>
                 </div>
 
                 <div class="col-12 col-md-6">
                     <label class="form-label">Street</label>
-                    <input name="Street" class="form-control" />
+                    <input asp-for="Street" class="form-control" />
                     <span asp-validation-for="Street" class="text-danger"></span>
                 </div>
                 <div class="col-12 col-md-6">
                     <label class="form-label">City</label>
-                    <input name="City" class="form-control" />
+                    <input asp-for="City" class="form-control" />
                     <span asp-validation-for="City" class="text-danger"></span>
                 </div>
             </div>
@@ -135,3 +140,6 @@
     </footer>
 
 </form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
