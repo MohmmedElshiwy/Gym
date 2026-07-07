@@ -1,4 +1,4 @@
-@model IEnumerable<Plan>
+@model IEnumerable<PlanViewModel>
 
 <div class="container">
     <header class="d-flex justify-content-between mt-5 mb-4 align-items-center">
@@ -40,15 +40,15 @@
                             <div class="mt-auto">
                                 <div class="d-grid gap-2">
 
-                                    <a href="\Plan\Details\@plan.Id" class="btn btn-outline btn-sm">
+                                    <a asp-action="Details" asp-controller="Plan" asp-route-id="@plan.Id" class="btn btn-outline btn-sm">
                                         <i class="bi bi-eye me-1"></i>View Details
                                     </a>
 
                                     <div class="d-flex gap-2">
-                                        <a href="\Plan\Edit\@plan.Id" class="btn btn-outline btn-sm flex-fill">
+                                        <a asp-action="Edit" asp-controller="Plan" asp-route-id="@plan.Id" class="btn btn-outline btn-sm flex-fill">
                                             <i class="bi bi-pencil me-1"></i>Edit
                                         </a>
-                                        <form href="\Plans\Activate\1" method="post" class="flex-fill">
+                                        <form asp-action="Delete" asp-controller="Plan" asp-route-id="@plan.Id" method="get" class="flex-fill">
                                             @* If Plan is Active put class text-danger if not text-success *@
                                             @if (plan.IsActive)
                                             {
@@ -61,7 +61,11 @@
 
                                                 </button>
                                             }
-                                            else{
+                                        </form>
+                                                                                <form asp-action="Delete" asp-controller="Plan" asp-route-id="@plan.Id" method="post" class="flex-fill">
+
+                                            @if (!plan.IsActive)
+                                            {
                                                    <button type="submit" class="btn btn-outline-success btn-sm w-100 ">
                                            
 
@@ -70,8 +74,8 @@
 
                                                 </button>
                                             }
+                                            </form>
 
-                                        </form>
                                     </div>
                                 </div>
                             </div>
