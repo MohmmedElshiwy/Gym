@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Gym.BLL.ViewModels.SessionsViewModels;
 using Gym.DAL.Entities;
 

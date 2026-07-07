@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Gym.BLL.ViewModels.SessionsViewModels;
+
 
 namespace Gym.BLL.Services.Interfaces
 {
     public interface ISessionsServices
     {
-        
+        public Task <IEnumerable<SessionViewModel>> GetAllSessionsAsync(CancellationToken ct = default);
     }
 }

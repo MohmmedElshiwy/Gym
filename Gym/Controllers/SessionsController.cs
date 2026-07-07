@@ -1,32 +1,25 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Gym.BLL.Services.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Gym.Controllers
 {
-    [Route("[controller]")]
     public class SessionsController : Controller
     {
-        private readonly ILogger<SessionsController> _logger;
+        private readonly ISessionsServices sessionsServices;
 
-        public SessionsController(ILogger<SessionsController> logger)
+        public SessionsController(ISessionsServices sessionsServices)
         {
-            _logger = logger;
+            this.sessionsServices = sessionsServices;
+        }
+        // GET: SessionsController1
+        public async Task<IActionResult> Index(CancellationToken ct)
+        {
+            var sessions = await sessionsServices.GetAllSessionsAsync(ct);
+            return View(sessions);
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View("Error!");
-        }
+      
+        
     }
 }

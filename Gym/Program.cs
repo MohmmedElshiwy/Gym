@@ -1,5 +1,6 @@
 using Gym.BLL.Services.Classes;
 using Gym.BLL.Services.Interfaces;
+using Gym.BLL.Utilites;
 using Gym.DAL.Contexts;
 using Gym.DAL.Repo.Classes;
 using Gym.DAL.Repo.Interfaces;
@@ -13,11 +14,13 @@ builder.Services.AddDbContext<GymDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddScoped<IUnitOfWork, UntiOfWork>();
+builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfile()));
 builder.Services.AddScoped<IPlanServices, PlanServices>();
-builder.Services.AddScoped(typeof(IGenaricRepo<>), typeof(GenaricRpo<>));
+//builder.Services.AddScoped(typeof(IGenaricRepo<>), typeof(GenaricRpo<>));
 builder.Services.AddScoped<IMemberServices, MemberServices>();
 builder.Services.AddScoped<ITranierServices, TranierServices>();
-
+builder.Services.AddScoped<ISessionsServices, SessionServices>();
 
 var app = builder.Build();
 
@@ -44,4 +47,3 @@ app.MapControllerRoute(
 
 
 app.Run();
-

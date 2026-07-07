@@ -1,4 +1,4 @@
-﻿using Gym.DAL.Entities;
+﻿﻿using Gym.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -26,5 +26,7 @@ namespace Gym.DAL.Contexts
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
         public DbSet<Plan> Plans { get; set; }
+        public DbSet<Session> Sessions { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
     }
 }
