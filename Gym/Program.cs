@@ -13,9 +13,11 @@ builder.Services.AddDbContext<GymDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-//builder.Services.AddScoped<IPlanReositories, PlanRepo>();
+builder.Services.AddScoped<IPlanServices, PlanServices>();
 builder.Services.AddScoped(typeof(IGenaricRepo<>), typeof(GenaricRpo<>));
 builder.Services.AddScoped<IMemberServices, MemberServices>();
+builder.Services.AddScoped<ITranierServices, TranierServices>();
+
 
 var app = builder.Build();
 
